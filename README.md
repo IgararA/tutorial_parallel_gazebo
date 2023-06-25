@@ -3,9 +3,8 @@ Gazebo中并联机构的添加
 
 主要内容在于URDF文件中的Gazebo标签中
 
-'''XML
+'''
   <gazebo>
-
       <joint name='WheelJointFixed' type='revolute'>
       <pose relative_to='KneelLegRight_Link'>0.120 0 0.0 0 0 0</pose>
       <parent>KneelLegRight_Link</parent>
