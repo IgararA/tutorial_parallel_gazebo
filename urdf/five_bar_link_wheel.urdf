@@ -1,0 +1,379 @@
+<?xml version="1.0"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="five_bar_link_wheel">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0075 -1.73472347597681E-18 8.67361737988404E-19"
+        rpy="0 0 0" />
+      <mass
+        value="0.0135623889803847" />
+      <inertia
+        ixx="2.78766795156418E-06"
+        ixy="-1.71652986887127E-23"
+        ixz="2.95359259330312E-23"
+        iyy="6.6710451789183E-07"
+        iyz="1.1172040840076E-22"
+        izz="2.62915302043677E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://five_bar_link/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://five_bar_link/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="HipLegLeft_Link">
+    <inertial>
+      <origin
+        xyz="0.0385915389101049 0.0231450453564016 -0.00750000000000001"
+        rpy="0 0 0" />
+      <mass
+        value="0.0317123889803847" />
+      <inertia
+        ixx="9.19613534897071E-06"
+        ixy="-1.26449249310354E-05"
+        ixz="5.1702299476663E-22"
+        iyy="2.2696286372092E-05"
+        iyz="-7.81584121835968E-23"
+        izz="3.07032071342983E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://five_bar_link/meshes/HipLegLeft_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://five_bar_link/meshes/HipLegLeft_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="HipLegLeft_Joint"
+    type="revolute">
+    <origin
+      xyz="-0.03 0.01475 0"
+      rpy="-1.5708 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="HipLegLeft_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1"
+      upper="1"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="KneelLegLeft_Link">
+    <inertial>
+      <origin
+        xyz="0.0600000000000001 6.10622663543836E-16 0.00749999999999999"
+        rpy="0 0 0" />
+      <mass
+        value="0.0407123889803848" />
+      <inertia
+        ixx="2.08116701789183E-06"
+        ixy="4.34104385467829E-21"
+        ixz="3.25026889091675E-22"
+        iyy="6.34457673472768E-05"
+        iyz="3.66564838745911E-23"
+        izz="6.40002197784042E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://five_bar_link/meshes/KneelLegLeft_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://five_bar_link/meshes/KneelLegLeft_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="KneelLegLeft_Joint"
+    type="revolute">
+    <origin
+      xyz="0.077183 0.04629 -0.03"
+      rpy="0 0 2.5378" />
+    <parent
+      link="HipLegLeft_Link" />
+    <child
+      link="KneelLegLeft_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1"
+      upper="1"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Wheel_Link">
+    <inertial>
+      <origin
+        xyz="0 0 -0.00750000000000001"
+        rpy="0 0 0" />
+      <mass
+        value="0.0188495559215387" />
+      <inertia
+        ixx="2.23838476568273E-06"
+        ixy="-3.64210794158237E-41"
+        ixz="7.80738329970698E-23"
+        iyy="2.23838476568273E-06"
+        iyz="7.10087278435785E-23"
+        izz="3.76991118430775E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://five_bar_link/meshes/Wheel_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://five_bar_link/meshes/Wheel_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+  <joint
+    name="Wheel_Joint"
+    type="continuous">
+    <origin
+      xyz="0.12 0 0.03"
+      rpy="0 0 0" />
+    <parent
+      link="KneelLegLeft_Link" />
+    <child
+      link="Wheel_Link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="HipLegRight_Link">
+    <inertial>
+      <origin
+        xyz="0.0413172682255292 -0.0178292833950133 -0.00750000000000001"
+        rpy="0 0 0" />
+      <mass
+        value="0.0317123889803847" />
+      <inertia
+        ixx="6.11263860111646E-06"
+        ixy="1.04287344650325E-05"
+        ixz="1.6561530048464E-21"
+        iyy="2.57797831199463E-05"
+        iyz="-3.8721004588062E-22"
+        izz="3.07032071342983E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://five_bar_link/meshes/HipLegRight_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://five_bar_link/meshes/HipLegRight_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="HipLegRight_Joint"
+    type="revolute">
+    <origin
+      xyz="-0.03 -0.01475 0"
+      rpy="1.5708 0 -1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="HipLegRight_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1"
+      upper="1"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="KneelLegRight_Link">
+    <inertial>
+      <origin
+        xyz="0.0599999999999999 -7.7715611723761E-16 -0.00750000000000001"
+        rpy="0 0 0" />
+      <mass
+        value="0.0407123889803847" />
+      <inertia
+        ixx="2.08116701789183E-06"
+        ixy="-8.25857123572943E-21"
+        ixz="-3.52780935291046E-22"
+        iyy="6.34457673472768E-05"
+        iyz="-4.16917738395054E-22"
+        izz="6.40002197784042E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://five_bar_link/meshes/KneelLegRight_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://five_bar_link/meshes/KneelLegRight_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="KneelLegRight_Joint"
+    type="revolute">
+    <origin
+      xyz="0.082635 -0.035659 0.015"
+      rpy="0 0 -2.4256" />
+    <parent
+      link="HipLegRight_Link" />
+    <child
+      link="KneelLegRight_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1"
+      upper="1"
+      effort="0"
+      velocity="0" />
+  </joint>
+
+  <gazebo>
+
+      <joint name='WheelJointFixed' type='revolute'>
+      <pose relative_to='KneelLegRight_Link'>0.120 0 0.0 0 0 0</pose>
+      <parent>KneelLegRight_Link</parent>
+      <child>Wheel_Link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-2</lower>
+          <upper>2</upper>
+          <effort>20</effort>
+          <velocity>30</velocity>
+        </limit>
+      </axis>
+      <dynamic>
+        <friction>0.01</friction>
+        <damping>0.01</damping>
+      </dynamic>
+    </joint>
+
+  </gazebo>
+
+  <gazebo>
+
+    <plugin name="gazebo_ros_joint_state_publisher"
+      filename="libgazebo_ros_joint_state_publisher.so">
+      <ros>
+        <namespace>/</namespace>
+        <argument>joint_states:=joint_states</argument>
+      </ros>
+      <update_rate>10</update_rate>
+      <joint_name>HipLegLeft_Joint</joint_name>
+      <joint_name>HipLegRight_Joint</joint_name>
+      <joint_name>KneelLegLeft_Joint</joint_name>
+      <joint_name>KneelLegRight_Joint</joint_name>
+      <joint_name>Wheel_Joint</joint_name>
+      <joint_name>WheelJointFixed</joint_name>
+
+
+    </plugin>
+
+  </gazebo>
+
+
+</robot>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>five_bar_link</name>
+  <version>0.0.0</version>
+  <description>five bar link</description>
+  <maintainer email="promwcx@163.com">igarara</maintainer>
+  <license>TODO: License declaration</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>rclcpp</depend>
+  <depend>gazebo_ros</depend>
+
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+    <gazebo_ros gazebo_model_path="${prefix}/.."/> <!--通过该行语句可以修改ROS2的markerfile从而使得urdf文件中的package://能够正确解析到install/packagename/share中 -->
+  </export>
+</package>
